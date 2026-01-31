@@ -1,0 +1,7 @@
+name: InstantShield
+version: ${project.version}
+main: com.instantshield.InstantShield
+api-version: 1.13
+folia-supported: true
+author: onurr_k
+description: Reduces the shield activation delay from 5 ticks to 0.
