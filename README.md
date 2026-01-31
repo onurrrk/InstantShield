@@ -1,6 +1,6 @@
 # 🛡️ InstantShield
 
-An **advanced shield delay removal system** developed for Minecraft servers.  
+An **shield delay removal system** developed for Minecraft servers.  
 Removes the default **5-tick (0.25s) shield warm-up delay** and supports **Folia** and all modern server software.
 
 ## 🚀 Features
