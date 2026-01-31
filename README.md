@@ -18,19 +18,6 @@ Removes the default **5-tick (0.25s) shield warm-up delay** and supports **Folia
 ### ⚙️ Fully Configurable
 - Can be enabled or disabled instantly via `config.yml`.
 
-## ⚙️ Supported Forks
-
-InstantShield is designed to be compatible with all popular Minecraft server forks.
-
-| Fork / Software | Support Status |
-|-----------------|----------------|
-| Paper           | ✅ Fully Supported |
-| Purpur          | ✅ Fully Supported |
-| Folia           | ✅ Fully Supported |
-| Leaf            | ✅ Fully Supported |
-| Spigot          | ✅ Fully Supported |
-| Bukkit          | ✅ Fully Supported |
-
 ## ⚙️ Configuration
 
 InstantShield is **enabled by default**.  
@@ -39,3 +26,16 @@ You can configure the plugin via `config.yml`:
 ```yaml
 # InstantShield Configuration
 instant-shield-enabled: true
+
+## ⚙️ Supported Forks
+
+| Fork / Build | Support Status  |
+|--------------|----------------|
+| ✅ Paper     | Fully Supported |
+| ✅ Purpur    | Fully Supported |
+| ✅ Spigot    | Fully Supported |
+| ✅ Folia     | Fully Supported |
+| ✅ Bukkit    | Partial Support |
+
+[![Discord](https://cdn.modrinth.com/data/cached_images/4de86371cc7bcf3818924b198f31baacc304700f.png)
+](https://discord.gg/H7RMcAMFeZ)
