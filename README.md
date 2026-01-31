@@ -26,6 +26,7 @@ You can configure the plugin via `config.yml`:
 ```yaml
 # InstantShield Configuration
 instant-shield-enabled: true
+```
 
 ## ⚙️ Supported Forks
 
