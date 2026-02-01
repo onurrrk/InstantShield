@@ -3,8 +3,7 @@
 An **shield delay removal system** developed for Minecraft servers.  
 Removes the default **5-tick (0.25s) shield warm-up delay** and supports **Folia** and all modern server software.
 
-![5Tick](https://cdn.modrinth.com/data/cached_images/79c2bf4b4b97ada0dcedea61b9a32bac506fe7eb.gif)
-![InstantShield](https://cdn.modrinth.com/data/cached_images/3e221b3e354e696a5211d70dcc9ec49fc317cd9a.gif)
+![InstantShield](https://raw.githubusercontent.com/onurrrk/InstantShield/refs/heads/main/InstantShield.gif)
 
 ## 🚀 Features
 
