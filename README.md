@@ -40,5 +40,11 @@ instant-shield-enabled: true
 | ✅ Folia     | Fully Supported |
 | ✅ Bukkit    | Fully Supported |
 
+## Statistics
+
+[![bStats](https://bstats.org/signatures/bukkit/InstantShield.svg)](https://bstats.org/plugin/bukkit/InstantShield/)
+
+## Discord
+
 [![Discord](https://cdn.modrinth.com/data/cached_images/4de86371cc7bcf3818924b198f31baacc304700f.png)
 ](https://discord.gg/kj5grZuxyQ)
