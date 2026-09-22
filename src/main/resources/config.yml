@@ -1,2 +1,5 @@
 # InstantShield Configuration
 instant-shield-enabled: true
+
+# Checks Modrinth for new stable releases (beta/alpha are ignored)
+update-checker: true
