@@ -22,7 +22,6 @@ Removes the default **5-tick (0.25s) shield warm-up delay** and supports **Folia
 
 ## ⚙️ Configuration
 
-InstantShield is **enabled by default**.  
 You can configure the plugin via `config.yml`:
 
 ```yaml
