@@ -28,16 +28,19 @@ You can configure the plugin via `config.yml`:
 ```yaml
 # InstantShield Configuration
 instant-shield-enabled: true
+
+# Checks Modrinth for new stable releases (beta/alpha are ignored)
+update-checker: true
 ```
 
 ## ⚙️ Supported Forks
 
 | Fork / Build | Support Status  |
-|--------------|----------------|
+|--------------|-----------------|
 | ✅ Paper     | Fully Supported |
 | ✅ Purpur    | Fully Supported |
-| ✅ Spigot    | Fully Supported |
 | ✅ Folia     | Fully Supported |
+| ✅ Spigot    | Fully Supported |
 | ✅ Bukkit    | Fully Supported |
 
 ## Statistics
