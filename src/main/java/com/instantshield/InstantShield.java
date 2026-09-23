@@ -91,6 +91,7 @@ public class InstantShield extends JavaPlugin implements Listener {
         } catch (Throwable ignored) {}
 
         saveDefaultConfig();
+        migrateConfig();
         instantShieldEnabled = getConfig().getBoolean("instant-shield-enabled", true);
 
         swapLowerer = new SwapShieldLowerer(this);
@@ -101,6 +102,87 @@ public class InstantShield extends JavaPlugin implements Listener {
         if (getConfig().getBoolean("update-checker", true)) {
             updateChecker = new UpdateChecker(this);
         }
+    }
+
+    private void migrateConfig() {
+        try {
+            java.io.File configFile = new java.io.File(getDataFolder(), "config.yml");
+            java.util.List<String> userLines = java.nio.file.Files.readAllLines(configFile.toPath(), java.nio.charset.StandardCharsets.UTF_8);
+
+            java.util.List<String> defaultLines;
+            try (java.io.InputStream in = getResource("config.yml")) {
+                if (in == null) {
+                    return;
+                }
+                defaultLines = new java.io.BufferedReader(new java.io.InputStreamReader(in, java.nio.charset.StandardCharsets.UTF_8))
+                        .lines().collect(java.util.stream.Collectors.toList());
+            }
+
+            java.util.Map<String, String> userValues = new java.util.LinkedHashMap<>();
+            for (String line : userLines) {
+                String key = topLevelKey(line);
+                if (key != null) {
+                    userValues.put(key, line);
+                }
+            }
+
+            java.util.Set<String> defaultKeys = new java.util.HashSet<>();
+            java.util.List<String> newLines = new java.util.ArrayList<>();
+            for (String line : defaultLines) {
+                String key = topLevelKey(line);
+                if (key == null) {
+                    newLines.add(line);
+                } else {
+                    defaultKeys.add(key);
+                    newLines.add(userValues.containsKey(key) ? userValues.get(key) : line);
+                }
+            }
+
+            java.util.List<String> extraLines = new java.util.ArrayList<>();
+            java.util.List<String> pendingComments = new java.util.ArrayList<>();
+            for (String line : userLines) {
+                String key = topLevelKey(line);
+                if (line.isEmpty()) {
+                    pendingComments.clear();
+                } else if (line.startsWith("#")) {
+                    pendingComments.add(line);
+                } else if (key != null) {
+                    if (!defaultKeys.contains(key)) {
+                        if (!extraLines.isEmpty()) {
+                            extraLines.add("");
+                        }
+                        extraLines.addAll(pendingComments);
+                        extraLines.add(line);
+                    }
+                    pendingComments.clear();
+                } else {
+                    pendingComments.clear();
+                }
+            }
+
+            if (!extraLines.isEmpty()) {
+                while (!newLines.isEmpty() && newLines.get(newLines.size() - 1).isEmpty()) {
+                    newLines.remove(newLines.size() - 1);
+                }
+                newLines.add("");
+                newLines.addAll(extraLines);
+            }
+
+            if (newLines.equals(userLines)) {
+                return;
+            }
+
+            java.nio.file.Files.write(configFile.toPath(), newLines, java.nio.charset.StandardCharsets.UTF_8);
+            reloadConfig();
+        } catch (Throwable ignored) {}
+    }
+
+    private static String topLevelKey(String line) {
+        if (line.isEmpty() || Character.isWhitespace(line.charAt(0)) || line.startsWith("#")) {
+            return null;
+        }
+        int colon = line.indexOf(':');
+        return colon > 0 ? line.substring(0, colon).trim() : null;
     }
 
     @Override
