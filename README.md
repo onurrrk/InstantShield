@@ -28,6 +28,10 @@ You can configure the plugin via `config.yml`:
 # InstantShield Configuration
 instant-shield-enabled: true
 
+# Delay in ticks (20 ticks = 1 second) before the shield becomes active
+# 0 = instant (default). Vanilla's own delay is 5 ticks.
+shield-delay-ticks: 0
+
 # Checks Modrinth for new stable releases (beta/alpha are ignored)
 update-checker: true
 ```
