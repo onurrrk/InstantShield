@@ -35,6 +35,14 @@ shield-delay-ticks: 0
 # Checks Modrinth for new stable releases (beta/alpha are ignored)
 update-checker: true
 ```
+## ⚡ Commands
+
+| Command | Permission | Description |
+|---------|------------|-------------|
+| `/instantshield reload` | `instantshield.reload` | Reloads config.yml and messages.yml from disk |
+| `/instantshield shield-delay-ticks <ticks>` | `instantshield.config` | Sets the shield delay in ticks (0 = instant) |
+| `/instantshield instant-shield-enabled <true\|false>` | `instantshield.config` | Enables or disables the plugin |
+| `/instantshield update-checker <true\|false>` | `instantshield.config` | Enables or disables the update checker |
 
 ## ⚙️ Supported Forks
 
