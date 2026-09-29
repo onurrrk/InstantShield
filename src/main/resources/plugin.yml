@@ -5,3 +5,19 @@ api-version: 1.13
 folia-supported: true
 author: onurr_k
 description: Reduces the shield activation delay from 5 ticks to 0.
+
+commands:
+  instantshield:
+    description: InstantShield management commands.
+    usage: /instantshield <reload|shield-delay-ticks|instant-shield-enabled|update-checker>
+
+permissions:
+  instantshield.reload:
+    description: Permission to use the instantshield reload command.
+    default: op
+  instantshield.config:
+    description: Permission to modify shield-delay-ticks, instant-shield-enabled, and update-checker settings.
+    default: op
+  instantshield.updatenotify:
+    description: Permission to view new version notifications.
+    default: op

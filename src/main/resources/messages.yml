@@ -1,0 +1,18 @@
+prefix: "&8[&bInstantShield&8] &r"
+
+reload-success: "{prefix}&aConfig reloaded."
+no-permission: "{prefix}&cYou don't have permission to do that."
+invalid-number: "{prefix}&e{input} &cis not a valid number."
+negative-value: "{prefix}&cshield-delay-ticks cannot be negative."
+shield-delay-set: "{prefix}&ashield-delay-ticks set to &e{value}."
+instant-shield-enabled-set: "{prefix}&ainstant-shield-enabled set to &e{value}."
+update-checker-set: "{prefix}&aupdate-checker set to &b{value}."
+usage-shield-delay: "{prefix}&cUsage: /instantshield shield-delay-ticks <ticks>"
+usage-boolean: "{prefix}&cUsage: /instantshield {sub} <true|false>"
+
+usage-separator: "&8&m--------------------------------------------------"
+usage-title: "&b&lInstantShield"
+usage-line-reload: "&e/instantshield reload"
+usage-line-shield-delay: "&e/instantshield shield-delay-ticks <ticks>"
+usage-line-instant-shield-enabled: "&e/instantshield instant-shield-enabled <true|false>"
+usage-line-update-checker: "&e/instantshield update-checker <true|false>"
